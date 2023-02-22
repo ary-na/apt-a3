@@ -12,18 +12,18 @@ public:
     RGBPixel(unsigned int r, unsigned int g, unsigned int b);
 
     //Deconstructor
-    ~RGBPixel();
+    virtual ~RGBPixel();
 
     // Return the brightness of a pixel
     // brigtness for RGBPixel = (r + g + b)/3
-    unsigned int getBrightness() const;
+    virtual unsigned int getBrightness() const;
 
     // Should return a reference to the correspoinding 
     // channel value of the pixel
     // 'r' <- red channel
     // 'g' <- green channel
     // 'b' <- blue channel
-    unsigned int& operator[](const char channel);
+    virtual unsigned int& operator[](const char channel);
 
 private:
     /*                                           */

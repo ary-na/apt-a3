@@ -13,10 +13,10 @@ class Pixel{
 public:    
 
     // get the brightness of the pixel
-    unsigned int getBrightness() const;
+    virtual unsigned int getBrightness() const = 0;
 
     //[] operator to access a channel in the pixel
-    unsigned int& operator[](const char channel);
+    virtual unsigned int& operator[](const char channel) = 0;
 
 private:
     

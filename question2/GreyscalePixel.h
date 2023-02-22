@@ -13,16 +13,16 @@ public:
     GreyscalePixel(unsigned int intensity);
 
     //Deconstructor
-    ~GreyscalePixel();
+    virtual ~GreyscalePixel();
 
     // Return the brightness of a pixel
     // brigtness for GreyscalePixel = intensity
-    unsigned int getBrightness() const;
+    virtual unsigned int getBrightness() const;
 
     // Should return a reference to the correspoinding 
     // channel value of the pixel
     // 'i' <- intensity
-    unsigned int& operator[](const char channel);
+    virtual unsigned int& operator[](const char channel);
 
 private:
     /*                                           */
