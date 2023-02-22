@@ -8,6 +8,7 @@
 
 class Patient {
 public:
+    Patient();
     Patient(std::string name, std::string dateOfBirth, int registrationNo);
 
     Patient(const Patient &other);
@@ -20,6 +21,8 @@ public:
                       std::string admittedWard = "Not applicable");
 
     std::string toString() const;
+
+    int getRegistrationNo();
 
 private:
     std::string name;

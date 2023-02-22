@@ -1,5 +1,7 @@
 #include "../include/Patient.h"
 
+Patient::Patient() {}
+
 Patient::Patient(std::string name, std::string dateOfBirth,
                  int registrationNo) {
     this->name = name;
@@ -35,6 +37,10 @@ void Patient::addAdmission(std::string admissionDate, std::string dischargeDate,
                            std::string admittedWard) {
     PatientAdmission newAdmission(admissionDate, dischargeDate, admittedWard);
     this->admissionHistory.push_back(newAdmission);
+}
+
+int Patient::getRegistrationNo(){
+    return this->registrationNo;
 }
 
 std::string Patient::toString() const {
