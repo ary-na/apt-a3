@@ -8,6 +8,7 @@
 
 #include "Date.h"
 
+std::ostream &operator<<(std::ostream &os, Date &date);
 
 int main(){
     /*                                           */
@@ -89,4 +90,10 @@ int main(){
     std::cout << std::endl;
 
     return EXIT_SUCCESS;
+}
+
+std::ostream &operator<<(std::ostream &os, Date &date) {
+    return os << std::to_string(date.getDay()) + "/" +
+                 std::to_string(date.getMonth()) + "/" +
+                 std::to_string(date.getYear());
 }

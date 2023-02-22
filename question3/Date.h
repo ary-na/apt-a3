@@ -3,16 +3,19 @@
 
 #include <iostream>
 
-class Date{
-public:    
-    
+class Date {
+public:
+
     // Constructors/DeConstructors
     Date();
 
     //dayNumber is the number of days since 1/3/0000 
     Date(unsigned long dayNumber);
-    Date(const Date& other);
-    Date(Date&& other);
+
+    Date(const Date &other);
+
+    Date(Date &&other);
+
     ~Date();
 
     //Contract: Year, Month, Day should be valid
@@ -21,11 +24,14 @@ public:
     //          date should be a numbers in range [1,31] and valid. 
     Date(unsigned int year, unsigned int month, unsigned int day);
 
-    
+
     //Getters and setters
     unsigned int getDay();
+
     unsigned int getMonth();
+
     unsigned int getYear();
+
     unsigned long getDayNumber() const;
 
     void setDate(unsigned long dayNumber);
@@ -39,8 +45,20 @@ public:
     /*                                           */
     /* YOU MAY ADD YOUR MODIFICATIONS HERE       */
     /*                                           */
+    unsigned int &operator[](const std::string &type);
 
-    
+    Date& operator++(int number);
+    Date& operator--(int number);
+
+    Date& operator= (const Date& other);
+
+    bool operator!= (const Date& other) const;
+    void operator+= (const int& other);
+    bool operator> (const Date& other) const;
+
+    Date operator+ (const int& other);
+    int operator- (const Date& other);
+
 private:
     /*                                           */
     /* DO NOT MOFIFY ANY CODE IN THIS SECTION    */
