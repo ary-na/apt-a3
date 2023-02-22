@@ -10,7 +10,7 @@ public:
 
     // Construct a GreyscalePixel with intensity channels 
     // initialized to intensity
-    GreyscalePixel(unsigned int intensity);
+    explicit GreyscalePixel(unsigned int intensity);
 
     //Deconstructor
     virtual ~GreyscalePixel();

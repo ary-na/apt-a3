@@ -7,7 +7,7 @@
 #include "RGBPixel.h"
 #include "GreyscalePixel.h"
 
-class Image{
+class Image {
 public:
     //Construct an image with nRows (number of rows) and
     // nCols (number of columns).
@@ -25,7 +25,7 @@ public:
 private:
 
     //Should be a vector of vector 
-    std::vector<std::vector<Pixel*> > img;
+    std::vector<std::vector<Pixel* > > img;
 
 };
 

@@ -3,8 +3,8 @@
 #include "Image.h"
 
 Image::Image(int nRows, int nCols) {
-    std::vector<Pixel *> row(nCols, nullptr);
-    this->img = std::vector<std::vector<Pixel *> >(nRows, row);
+    this->img = std::vector<std::vector<Pixel *> >(nRows,
+                                                   std::vector<Pixel *>(nCols));
 }
 
 Image::~Image() = default;
