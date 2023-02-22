@@ -15,17 +15,26 @@ public:
 
     ~PatientRegister();
 
-    void addPatient(Patient* patient);
+    // This function adds a patient to the linked list.
+    void addPatient(Patient *patient);
 
-    void removePatient(Patient* patient);
+    // This function removes a patient to the linked list.
+    void removePatient(Patient *patient);
 
+    // This function returns a boolean if patient exists in the linked list.
     bool isPatientRegistered(int registrationNo);
 
-    Patient* getPatient(int registrationNo);
+    // This functions takes a registration number and return a patient from the
+    // linked list.
+    Patient *getPatient(int registrationNo);
 
-    Patient &operator[] (int registrationNo);
+    // This functions takes a registration number and return a patient from the
+    // linked list.
+    Patient &operator[](int registrationNo);
 
 private:
+    // I have utilised doubly linked list as it is very efficient when
+    // we don't know ahead of time how many entries we are going to record.
     std::list<Patient *> patients;
 };
 

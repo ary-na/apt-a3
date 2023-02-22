@@ -17,17 +17,23 @@ public:
 
     ~Patient();
 
+    // This function create PatientAdmission object and adds the admissions to it.
     void addAdmission(std::string admissionDate, std::string dischargeDate,
                       std::string admittedWard = "Not applicable");
 
+    // This function returns patient information in form of a string.
     std::string toString() const;
 
+    // Getter
     int getRegistrationNo();
 
 private:
     std::string name;
     std::string dateOfBirth;
     int registrationNo;
+    // I have used a vector of PatientAdmission class to store admissions,
+    // for each patient. Vector here makes sense as it is very efficient and can
+    // Allocate more memory efficiently and automatically when needed.
     std::vector <PatientAdmission> admissionHistory;
 
 };

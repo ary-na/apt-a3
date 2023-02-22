@@ -16,6 +16,7 @@ public:
 
     ~PatientAdmission();
 
+    // This function return patient admission information in form of a string.
     std::string toString();
 
     // Getter and setter

@@ -14,6 +14,7 @@ public:
 
     ~Queue();
 
+    // Getter and setter
     Patient* getPatient();
 
     int getQueueNumber();
